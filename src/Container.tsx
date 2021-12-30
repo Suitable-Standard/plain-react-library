@@ -6,11 +6,15 @@ import { isEqual } from "lodash";
 import styles from "./styles.module.css";
 import le from "./le.less";
 
-const Container: FC<IContainerProps> = ({ title = "default title - v2" }) => {
-  async function k() {
-    await Promise.resolve(1);
-  }
+// 编译es7语法
+async function k() {
+  await Promise.resolve(1);
+}
 
+const Container: FC<IContainerProps> = ({
+  title = "default title - v2",
+  firstName,
+}) => {
   const handleClick = async () => {
     // 只打包 isEqual 这一个方法，不会将lodash全部打包
     const isEquals = isEqual(0, 1);
@@ -26,8 +30,10 @@ const Container: FC<IContainerProps> = ({ title = "default title - v2" }) => {
   }, []);
 
   return (
-    <div className={le.cs}>
-      <span onClick={handleClick}>{title}</span>
+    <div>
+      <span className={le.ddd} onClick={handleClick}>
+        {title} - {firstName}
+      </span>
     </div>
   );
 };
