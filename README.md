@@ -1,4 +1,4 @@
-# 基于 Rollup 构建组件
+# 基于 Rollup 构建组件库
 
 - 支持 `umd, cjs, esm` format.
 - 支持 `*.module.css`, 变量式访问 `.less`
