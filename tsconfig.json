@@ -1,18 +1,20 @@
 {
   "compilerOptions": {
-    "target": "ES5",
+    "target": "ESNext",
+    "module": "ESNext",
     "outDir": "dist",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "declaration": true,
+    "sourceMap": true,
     "declarationDir": "dist",
     "esModuleInterop": true,
     "strict": true,
-    "module": "ESNext",
     "moduleResolution": "node",
     "noEmit": true,
     "jsx": "react",
-    "newLine": "lf"
+    "newLine": "lf",
+    "checkJs": true
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist", "global.d.ts"]
+  "include": ["./src", "./global.d.ts"],
+  "exclude": ["node_modules", "dist"]
 }
